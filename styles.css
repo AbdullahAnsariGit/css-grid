@@ -1,0 +1,46 @@
+.container{
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px; */
+    /* 1fr is unit in grid which means distribute box in equal fraction size */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4,1fr); */
+
+    /* repeat(boxCount, widthOfBox) --- 1st parameter box count, 2nd box width  */
+    /* auto-fill --- Use for auto adjust box count */
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    grid-gap: 20px;
+    /* column-gap: 20px; */
+
+    /* For height */
+    /* grid-auto-rows: 200px; */ 
+    /* grid-auto-columns:repeat(auto-fill, minmax(100px, 200px))  */
+
+
+}
+
+.items {
+    background: green;
+    border:  2px solid red;
+}
+.item-1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.item-2{
+/* grid-column-start: 5;
+grid-column-end:6; */
+}
+
+.nasted-item-container{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+.nasted-item{
+    background: red;
+    border: 2px solid yellow;
+}

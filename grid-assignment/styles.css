@@ -1,0 +1,33 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    display: grid;
+    background-color: bisque;
+    grid-gap: 10px;
+ 
+}
+.main{
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: minmax(100px, auto);
+
+}
+
+.item{
+    border: 1px solid #000;
+   
+}
+
+h1{
+    text-align: center;
+}
