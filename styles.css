@@ -44,3 +44,8 @@ grid-column-end:6; */
     background: red;
     border: 2px solid yellow;
 }
+
+.main{
+    height: 100%;
+
+}
