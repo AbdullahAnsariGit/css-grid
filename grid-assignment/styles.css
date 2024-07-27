@@ -44,6 +44,8 @@ h1{
     background-color: bisque;
     grid-gap: 10px;
     height: 100vh;
+    grid-template-rows: 80px auto 1fr 80px;
+
 }
 .header{
     max-height: 80px;
@@ -81,6 +83,6 @@ h1 {
 .item-uni{
   /* grid-column-start: 1;
   grid-column-end: 3; */
-  grid-column: span 3;
+  /* grid-column: span 3; */
 
 }
