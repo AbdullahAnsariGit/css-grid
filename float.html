@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Float</title>
+    <style>
+        .block {
+            background-color: #000;
+            height: 30vw;
+            width: 30vw;
+        }
+
+        .block p {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .left {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .clear {
+            /* clear: both; */
+            clear: left;
+            /* clear: right; */
+        }
+
+        .box {
+            background-color: bisque;
+            padding: 10px;
+            display: flow-root;
+            /* overflow: auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="block left">
+            <p>Float Left</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+
+    <div class="clear"></div>
+    <p>Recusandae delectus neque facere asperiores quos explicabo a accusantium? Consequuntur numquam quos delectus
+        incidunt commodi nisi voluptatibus culpa ullam possimus dolorum id tempore magni accusamus, explicabo mollitia
+        dicta esse et.</p>
+    <p>Minima, facere dolorem! Repellat, voluptates. Ex ea deleniti animi. Possimus ipsum molestiae, maiores velit
+        sequi, omnis iusto consequatur minima, a praesentium nulla placeat vitae id voluptate harum deleniti voluptates
+        fugiat!</p>
+    <div class="block right">
+        <p>Float Right</p>
+    </div>
+    <p>Molestiae libero corporis laboriosam, beatae et totam error illo eligendi voluptates nemo? Illo reprehenderit
+        voluptate aliquam eos, maiores aut aliquid accusantium inventore iste doloribus odit iusto pariatur ipsam porro
+        assumenda.</p>
+    <p>Quibusdam quis quos eligendi asperiores perspiciatis. Iste quod illum saepe itaque natus blanditiis quos
+        voluptatem, at corporis necessitatibus facilis nobis deleniti ea repellat labore fugit repudiandae quia ipsam
+        amet dicta?</p>
+</body>
+
+</html>
+
+<!-- Notes -->
+<!-- 
+1. Float:
+   - `float` property element ko left ya right side me align karta hai, baaki content ko wrap hone deta hai. 
+     .left { float: left; margin-right: 10px; }
+
+2. Left:
+   - `float: left;` element ko left side me align karta hai aur baaki content ko uske right me wrap hone deta hai.
+     .left { float: left; margin-right: 10px; }
+
+3. Right:
+   - `float: right;` element ko right side me align karta hai aur baaki content ko uske left me wrap hone deta hai.
+     .right { float: right; }
+
+4. Clear:
+   - `clear` property floated elements ka effect khatam karti hai, ensure karti hai ki subsequent content floated elements ke baad display ho.
+     .clear { clear: left; }
+
+5. Flow-root:
+   - `display: flow-root;` container ko apne floated child elements ko contain karne deta hai, ensuring ki container apne floated content ke baad apni height adjust kare.
+     .box { background-color: bisque; padding: 10px; display: flow-root; }
+
+6. Overflow Auto:
+   - `overflow: auto;` container ko apne floated child elements ko contain karne deta hai aur overflow hone par scrollbars appear hoti hain.
+     .box { background-color: bisque; padding: 10px; overflow: auto; }
+
+### HTML Body
+
+1. Box Container:
+   <div class="box">
+       <div class="block left">
+           <p>Float Left</p>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+   </div>
+   - `.box` container ka background bisque hai aur isme 10px padding hai. Is container ke andar ek `.block left` element hai jo left float kiya gaya hai aur ek paragraph hai jo left floated element ke baad appear hota hai.
+
+2. Clear Element:
+   <div class="clear"></div>
+   - Yeh element left floated elements ko clear karta hai, ensuring that subsequent content floated elements ke baad shuru hota hai.
+
+3. Right Floated Block:
+   <div class="block right">
+       <p>Float Right</p>
+   </div>
+   - Yeh block element right float kiya gaya hai aur iska content right side me align hota hai.
+
+### Paragraphs
+
+- Baaki paragraphs normal flow me render hote hain, floated elements ke side me wrap hote hain ya clear hone ke baad display hote hain.
+-->
